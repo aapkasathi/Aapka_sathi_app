@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'theme.dart';
+import 'services/language_service.dart';
+import 'screens/language_selection_screen.dart';
+import 'screens/multilingual_demo_screen.dart';
 
 // Import all the screens created
 import 'screens/start/language_screen.dart';
@@ -27,10 +30,14 @@ import 'screens/policyscreen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
-  // 3. Ensure Flutter is initialized
+  // Ensure Flutter is initialized
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 4. Initialize Supabase
+  // Initialize Language Service
+  final languageService = LanguageService();
+  await languageService.init(defaultLanguage: 'en');
+
+  // Initialize Supabase
   await Supabase.initialize(
     url: 'https://ncexztproaiixhnnyihv.supabase.co', 
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5jZXh6dHByb2FpaXhobm55aWh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk2ODU5MjQsImV4cCI6MjA4NTI2MTkyNH0.HrFxAo5BFyQWKbeGBC3YcrTArqdaBFtK5PIv0KDisT8',
