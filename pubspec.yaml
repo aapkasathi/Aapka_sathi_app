@@ -1,0 +1,44 @@
+name: aapka_sarthi
+description: Aapka Sarthi - Service Platform
+publish_to: 'none'
+version: 1.0.1+2
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  # The default icon pack
+  cupertino_icons: ^1.0.6
+  shared_preferences: ^2.3.5
+  # packages
+  file_picker: ^10.3.8
+  url_launcher: ^6.2.1
+  intl: ^0.20.2
+  image_picker: ^1.0.4
+  supabase_flutter: ^2.0.0
+  path : ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # You need this package for the icon configuration below to work
+  flutter_launcher_icons: ^0.14.4
+  rename: ^3.1.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+
+# Configuration for the app icon generator
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+
