@@ -86,31 +86,32 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
 
                       return Padding(
                         padding: const EdgeInsets.only(bottom: 16),
-                        child: Material(
-                          child: RadioListTile<String>(
-                            value: langCode,
-                            groupValue: _selectedLanguage,
-                            onChanged: (value) {
-                              setState(() {
-                                _selectedLanguage = value;
-                              });
-                            },
-                            title: Text(
-                              languageName,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: isSelected
-                                    ? FontWeight.bold
-                                    : FontWeight.normal,
-                                color: isSelected
-                                    ? Colors.blue.shade700
-                                    : Colors.black87,
-                              ),
+                        child: RadioListTile<String>(
+                          value: langCode,
+                          groupValue: _selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedLanguage = value;
+                            });
+                          },
+                          title: Text(
+                            languageName,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: isSelected
+                                  ? FontWeight.bold
+                                  : FontWeight.normal,
+                              color: isSelected
+                                  ? Colors.blue.shade700
+                                  : Colors.black87,
                             ),
-                            activeColor: Colors.blue.shade700,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
+                          ),
+                          activeColor: Colors.blue.shade700,
+                          tileColor: isSelected 
+                              ? Colors.blue.shade50 
+                              : Colors.transparent,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                       );
