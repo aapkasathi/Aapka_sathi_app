@@ -1,4 +1,4 @@
- Aapka Sarthi — Service Platform 
+ <br> Aapka Sarthi — Service Platform </br> 
  Aapka Sarthi is a robust, cross-platform mobile application built with Flutter. Designed for empowering street vendors by giving them seamless user service management, document processing, and real-time backend communication, it empowers users with features like dynamic PDF generation, document uploading, localized formatting, and secure cloud storage.
  🚀 Key Features🔐
  Authentication & Backend: Real-time database sync and secure authentication powered by Supabase.
